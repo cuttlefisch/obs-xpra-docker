@@ -10,7 +10,7 @@ function show_log() {
 
 xvfb='Xorg -dpi 96 -noreset -nolisten tcp +extension GLX +extension RANDR +extension RENDER -logfile ${HOME}/.xpra/Xvfb-10.log -config ${HOME}/xorg.conf'
 
-xpra --xvfb="$xvfb"  start :100 --exec-wrapper="$(which vglrun) -d :100" --start=obs --bind-tcp=0.0.0.0:14500 --html=on
+xpra --xvfb="$xvfb"  start :100 --exec-wrapper="$(which vglrun) -d :100" --start="obs $*" --bind-tcp=0.0.0.0:14500 --html=on
 
 show_log &
 
