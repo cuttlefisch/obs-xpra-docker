@@ -14,7 +14,7 @@ $ docker run \
 	obs-xpra
 ```
 
-![capture01][./docs/capture-01.png]
+![capture01](./docs/capture-01.png)
 
 # License
 
