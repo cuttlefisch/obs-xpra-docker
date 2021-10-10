@@ -1,4 +1,4 @@
-FROM arm32v7/ubuntu:21.04 as vgl-builder
+FROM ubuntu:21.04 as vgl-builder
 MAINTAINER Joseph Lee <joseph@jc-lab.net>
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -24,7 +24,7 @@ RUN mkdir -p /work/vgl/dist/usr/lib/ && \
     cd /work/vgl/dist/usr && \
     tar -cvf /work/vgl/dist.tar bin lib doc
 
-FROM arm32v7/ubuntu:21.04
+FROM ubuntu:21.04
 MAINTAINER Joseph Lee <joseph@jc-lab.net>
 
 ARG DEBIAN_FRONTEND=noninteractive
