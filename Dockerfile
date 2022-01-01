@@ -35,7 +35,11 @@ RUN apt-get update -y && \
     git python3 \
     ffmpeg obs-studio xpra net-tools passwd \
     v4l-utils mesa-utils mesa-utils-extra fonts-noto-cjk \
-    libjpeg-turbo8
+    libjpeg-turbo8 libqt5network5 libqt5concurrent5 qt5-image-formats-plugins
+
+
+COPY "obs-websocket-5.0.0-alpha3-Ubuntu64.deb" "/work/obs-websocket-5.0.0-alpha3-Ubuntu64.deb"
+RUN dpkg -i "/work/obs-websocket-5.0.0-alpha3-Ubuntu64.deb"
 
 COPY --from=vgl-builder /work/vgl/dist.tar /tmp/vgl-dist.tar
 RUN cd /usr/ && \
