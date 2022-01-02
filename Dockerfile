@@ -38,8 +38,8 @@ RUN apt-get update -y && \
     libjpeg-turbo8 libqt5network5 libqt5concurrent5 qt5-image-formats-plugins
 
 
-COPY "obs-websocket_4.9.1-1_amd64.deb" "/work/obs-websocket_4.9.1-1_amd64.deb"
-RUN dpkg -i "/work/obs-websocket_4.9.1-1_amd64.deb"
+COPY "obs-websocket_4.6.1-1_amd64.deb" "/work/obs-websocket_4.6.1-1_amd64.deb"
+RUN dpkg -i "/work/obs-websocket_4.6.1-1_amd64.deb"
 
 COPY --from=vgl-builder /work/vgl/dist.tar /tmp/vgl-dist.tar
 RUN cd /usr/ && \
